@@ -8,10 +8,10 @@ $ npm install react-hook-collapse
 
 ## Usage
 
-Example:
+Example #1 - using Ref and Hook:
 
 ```js
-import useCollapse from 'react-hook-collapse';
+import useCollapse, { Collapsible } from 'react-hook-collapse';
 import React, { useState, useRef } from 'react';
 
 function MyComponent() {
@@ -28,9 +28,38 @@ function MyComponent() {
       >
         Toggle
       </button>
-      <div ref={ref} style={{ transition: '0.3s' }}>
+      <div ref={ref} style={{ overflow: 'hidden', transition: '0.3s' }}>
         ...content...
       </div>
+    </section>
+  );
+}
+```
+
+Example #2 - using the baked Collapsible component:
+
+```js
+import { Collapsible } from 'react-hook-collapse';
+import React, { useState, useRef } from 'react';
+
+function MyComponent() {
+  const [state, setState] = useState(false);
+
+  return (
+    <section>
+      <button
+        onClick={() => {
+          setState(!state);
+        }}
+      >
+        Toggle
+      </button>
+      <Collapsible
+        expanded={state}
+        style={{ overflow: 'hidden', transition: '0.3s' }}
+      >
+        ...content...
+      </Collapsible>
     </section>
   );
 }

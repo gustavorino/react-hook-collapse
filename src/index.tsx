@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React, { useRef, useState } from 'react';
-import useCollapsible from './useCollapsible';
+import useCollapsible, { Collapsible } from './useCollapsible';
 
 function Example() {
   const ref = useRef<HTMLDivElement>();
@@ -17,7 +17,7 @@ function Example() {
         style={{
           overflow: 'hidden',
           background: 'red',
-          transition: '0s'
+          transition: '0.5s'
         }}
         ref={ref}
       >
@@ -27,12 +27,15 @@ function Example() {
         <h1>My Mask</h1>
       </div>
 
-      <div style={{ overflow: 'hidden', transition: '1s' }} ref={ref2}>
-        <h1>My Other Mask</h1>
-        <h1>My Other Mask</h1>
-        <h1>My Other Mask</h1>
-        <h1>My Other Mask</h1>
-      </div>
+      <Collapsible
+        style={{ overflow: 'hidden', transition: '0.5s' }}
+        expanded={state}
+      >
+        <h1>My Mask</h1>
+        <h1>My Mask</h1>
+        <h1 className=" ">My Mask</h1>
+        <h1>My Mask</h1>
+      </Collapsible>
     </div>
   );
 }

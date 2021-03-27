@@ -1,4 +1,25 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import React, {
+  FunctionComponent,
+  HTMLProps,
+  MutableRefObject,
+  useEffect,
+  useRef
+} from 'react';
+
+export const Collapsible: FunctionComponent<
+  { expanded: boolean } & HTMLProps<HTMLDivElement>
+> = (props) => {
+  const { children, ...rest } = props;
+
+  const ref = useRef();
+  useCollapsible(ref, props.expanded || false);
+
+  return (
+    <div ref={ref} {...rest}>
+      {children}
+    </div>
+  );
+};
 
 export default function useCollapsible(
   maskRef: MutableRefObject<HTMLElement>,

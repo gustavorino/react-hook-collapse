@@ -15,5 +15,5 @@
     "pretty": true,
     "jsx": "react"
   },
-  "include": ["./src/useCollapsible.ts"]
+  "include": ["src/useCollapsible.tsx"]
 }
