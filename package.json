@@ -30,8 +30,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "./scripts/clean.sh && tsc -p .",
-    "test": "echo 0",
-    "prepublish": "npm run build"
+    "test": "echo 0"
   },
   "main": "dist/useCollapsible.js",
   "typings": "dist/useCollapsible.d.ts",
