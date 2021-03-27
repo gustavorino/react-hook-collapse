@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "./scripts/build.sh",
+    "build": "./scripts/clean.sh && tsc -p .",
     "test": "echo 0",
     "prepublish": "npm run build"
   },
