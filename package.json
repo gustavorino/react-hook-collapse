@@ -30,11 +30,11 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "./scripts/clean.sh && tsc -p .",
-    "build-example": "parcel build src/index.html --dist-dir ./build-example --public-url . --target example",
+    "build-docs": "rm -rf .parcel-cache docs && parcel build src/index.html --dist-dir ./docs --public-url . --target docs",
     "test": "echo 0"
   },
   "targets": {
-    "example": {
+    "docs": {
       "engines": {
         "browsers": [
           "> 1%",
