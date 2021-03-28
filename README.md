@@ -1,3 +1,5 @@
+# REACT HOOK COLLAPSE
+
 > A minimalist HTML react hook collapsible that uses CSS transitions
 
 ## Installation
@@ -5,6 +7,12 @@
 ```bash
 $ npm install react-hook-collapse
 ```
+
+---
+
+## [Examples](https://gustavorino.github.io/react-hook-collapse/)
+
+---
 
 ## Usage
 
@@ -65,6 +73,8 @@ function MyComponent() {
 }
 ```
 
+---
+
 ## Features
 
 - CSS transition based, you can set the animation duration using your favorite CSS framework.
@@ -74,6 +84,8 @@ function MyComponent() {
 - Doesn't manipulate component Props.
 - Doesn't stack animations on fast toggle.
 - Doesn't lock the mask height. Sets to 'auto' when animation is finished.
+
+---
 
 ## Browser support
 
