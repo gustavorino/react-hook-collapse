@@ -7,6 +7,7 @@
     "noEmitOnError": true,
     "target": "es5",
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "removeComments": false,
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
