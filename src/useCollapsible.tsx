@@ -7,12 +7,12 @@ import React, {
 } from 'react';
 
 export const Collapsible: FunctionComponent<
-  { expanded: boolean } & HTMLProps<HTMLDivElement>
+  { expanded?: boolean } & HTMLProps<HTMLDivElement>
 > = (props) => {
-  const { children, ...rest } = props;
+  const { children, expanded, ...rest } = props;
 
   const ref = useRef();
-  useCollapsible(ref, props.expanded || false);
+  useCollapsible(ref, expanded || false);
 
   return (
     <div ref={ref} {...rest}>
