@@ -5,6 +5,7 @@ before_install:
   - npm install -g typescript
 install:
   - npm install
+  - npm run build
 deploy:
   provider: npm
   email: "$EMAIL"
