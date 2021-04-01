@@ -1,6 +1,6 @@
 {
   "name": "react-hook-collapse",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": {
     "name": "Gustavo Bremm",
     "url": "https://github.com/gustavorino"
@@ -49,6 +49,9 @@
   "files": [
     "dist/"
   ],
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
   "devDependencies": {
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
@@ -59,9 +62,8 @@
     "react-dom": "^17.0.0",
     "react-icons": "^4.2.0",
     "tailwindcss": "^2.0.4",
-    "typescript": "^4.2.3"
-  },
-  "dependencies": {
+    "typescript": "^4.2.3",
     "react": "^17.0.0"
-  }
+  },
+  "dependencies": {}
 }
