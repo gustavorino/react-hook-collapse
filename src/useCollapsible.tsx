@@ -57,7 +57,7 @@ export default function useCollapsible(
           if (expanded) {
             maskElem.ontransitionend = (e) => {
               if (e.propertyName === 'height') {
-                maskElem.style.removeProperty('height');
+                maskElem.style.height = 'auto';
               }
             };
           }
