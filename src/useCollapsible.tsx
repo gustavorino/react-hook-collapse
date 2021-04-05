@@ -35,9 +35,7 @@ export default function useCollapsible(
     }
 
     if (firstUpdate.current) {
-      if (!expanded) {
-        maskElem.style.height = '0px';
-      }
+      maskElem.style.height = expanded ? 'auto' : '0px';
       firstUpdate.current = false;
       return;
     }
