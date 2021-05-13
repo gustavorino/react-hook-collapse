@@ -48,21 +48,27 @@ export default function useCollapsible(
     maskElem.style.height = 'auto';
     maskElem.style.height = iniHeight + 'px';
 
-    // some browsers require a bigger delay to allow transaction animation to occur
-    requestAnimationFrame(() => {
+    // only animates if there is a difference ( display none will return always 0)
+    if (iniHeight !== endHeight) {
+      // some browsers require a bigger delay to allow transaction animation to occur
+
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          if (expanded) {
-            maskElem.ontransitionend = (e) => {
-              if (e.propertyName === 'height') {
-                maskElem.style.height = 'auto';
-              }
-            };
-          }
-          maskElem.style.height = endHeight + 'px';
+          requestAnimationFrame(() => {
+            if (expanded) {
+              maskElem.ontransitionend = (e) => {
+                if (e.propertyName === 'height') {
+                  maskElem.style.height = 'auto';
+                }
+              };
+            }
+            maskElem.style.height = endHeight + 'px';
+          });
         });
       });
-    });
+    } else {
+      maskElem.style.height = expanded ? 'auto' : '0px';
+    }
 
     return function () {
       maskElem.ontransitionend = undefined;

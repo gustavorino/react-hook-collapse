@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AiFillBug, AiFillGithub } from 'react-icons/ai';
 import Example1 from './examples/Example1';
+import Example2 from './examples/Example2';
 
 function Main() {
   return (

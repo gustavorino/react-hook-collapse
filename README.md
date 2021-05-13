@@ -10,6 +10,12 @@ $ npm install react-hook-collapse
 
 ---
 
+## HINTS
+
+> Don't use vertical padding or border on the mask element. Create a wrapper or use pseudo elements :after/:before
+
+---
+
 ## [Examples](https://gustavorino.github.io/react-hook-collapse/)
 
 ---
