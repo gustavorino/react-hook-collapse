@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { AiFillBug, AiFillGithub } from 'react-icons/ai';
 import Example1 from './examples/Example1';
 import Example2 from './examples/Example2';
@@ -41,4 +41,6 @@ function Main() {
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+const root = createRoot(document.getElementById('app')!);
+
+root.render(<Main />);
